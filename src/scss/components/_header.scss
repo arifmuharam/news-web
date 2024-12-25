@@ -1,0 +1,11 @@
+@use '../util/' as u;
+
+.header {
+  &__logo {
+    width: u.rem(45);
+
+    @media (width >= u.rem(1110)) {
+      width: u.rem(64);
+    }
+  }
+}
