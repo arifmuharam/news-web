@@ -1,0 +1,30 @@
+@use '../util/' as u;
+
+.feature {
+  &__image {
+  }
+
+  &__headline {
+    font-size: u.rem(40);
+    font-size: clamp(
+      u.rem(40),
+      2.147887323943662rem + 1.5023474178403755vw,
+      u.rem(56)
+    );
+    font-weight: 800;
+  }
+
+  &__description {
+  }
+
+  &__button {
+    display: inline-block;
+    background-color: var(--c-red);
+    color: var(--c-white);
+    font-size: u.rem(14);
+    letter-spacing: 0.31em;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: u.rem(12) u.rem(30);
+  }
+}

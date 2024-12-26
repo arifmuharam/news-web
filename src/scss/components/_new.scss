@@ -1,0 +1,37 @@
+@use '../util/' as u;
+
+.new {
+  background-color: var(--c-blue);
+  padding: u.rem(24) u.rem(20);
+
+  &__title {
+    font-size: clamp(
+      u.rem(32),
+      1.823943661971831rem + 0.7511737089201878vw,
+      u.rem(40)
+    );
+    color: var(--c-yellow);
+  }
+
+  &__post {
+    padding-block: u.rem(30);
+    border-block-end: 1px solid var(--c-gray);
+
+    &:last-child {
+      border: none;
+    }
+  }
+
+  &__headline {
+    display: inline-block;
+    font-size: u.rem(20);
+    font-weight: 800;
+    margin-block-end: u.rem(8);
+    color: var(--c-white);
+  }
+
+  &__description {
+    font-size: u.rem(15);
+    color: var(--c-silver);
+  }
+}
