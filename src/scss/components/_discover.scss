@@ -1,0 +1,39 @@
+@use '../util/' as u;
+
+.discover {
+  display: grid;
+  margin-block-end: u.rem(50);
+
+  @media (width >= u.em(1110)) {
+    grid-template-columns: subgrid;
+    grid-column: 1 / -1;
+    padding-block: u.rem(30);
+  }
+
+  &__item {
+    margin-block-end: u.rem(30);
+  }
+
+  &__image {
+    height: u.rem(262);
+    object-fit: cover;
+  }
+
+  &__category {
+    background-color: var(--c-blue);
+    width: fit-content;
+    height: fit-content;
+    padding-inline: u.rem(10);
+    color: var(--c-white);
+    font-weight: 600;
+  }
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__title {
+    margin-block-start: u.rem(10);
+  }
+}

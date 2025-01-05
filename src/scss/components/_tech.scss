@@ -1,0 +1,52 @@
+@use '../util/' as u;
+
+.tech {
+  display: grid;
+  gap: u.rem(24);
+
+  @media (width >= u.em(1110)) {
+    gap: u.rem(30);
+    grid-template-columns: subgrid;
+    grid-template-rows: repeat(3, auto);
+    grid-column: 1 / -1;
+  }
+
+  &__picture {
+    @media (width >= u.em(1110)) {
+      grid-area: 1 / 1 / 4 / 3;
+    }
+  }
+
+  &__image {
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__headline {
+    font-size: u.rem(40);
+    font-size: clamp(
+      u.rem(40),
+      2.147887323943662rem + 1.5023474178403755vw,
+      u.rem(32)
+    );
+    font-weight: 800;
+  }
+
+  &__theme {
+    background-color: var(--c-blue);
+    width: fit-content;
+    height: fit-content;
+    padding: 10px 20px;
+    color: var(--c-white);
+    font-weight: 600;
+  }
+
+  &__description {
+    @media (width >= u.em(1110)) {
+      grid-column: 3 / 4;
+      grid-row: 3 / 4;
+      font-size: var(--f-xs);
+      text-align: justify;
+    }
+  }
+}
