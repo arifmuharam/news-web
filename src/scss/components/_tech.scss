@@ -49,4 +49,12 @@
       text-align: justify;
     }
   }
+
+  a {
+    color: var(--c-blue);
+
+    &:hover {
+      color: var(--c-red);
+    }
+  }
 }

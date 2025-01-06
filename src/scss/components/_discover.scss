@@ -36,4 +36,12 @@
   &__title {
     margin-block-start: u.rem(10);
   }
+
+  a {
+    color: var(--c-blue);
+
+    &:hover {
+      color: var(--c-red);
+    }
+  }
 }

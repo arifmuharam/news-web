@@ -1,0 +1,38 @@
+@use '../util/' as u;
+
+.footer {
+  background-color: var(--c-blue);
+  color: var(--c-white);
+  padding: u.rem(30);
+
+  h3 {
+    color: var(--c-yellow);
+    margin-block-end: u.rem(10);
+  }
+
+  @media (width >= u.em(1110)) {
+    &__follow-us {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: left;
+
+      h3,
+      ul {
+        width: 30%;
+      }
+    }
+  }
+
+  a {
+    color: var(--c-white);
+  }
+
+  &__copyright {
+    text-align: center;
+
+    @media (width >= u.em(1110)) {
+      grid-column: 2 / 3;
+    }
+  }
+}
